@@ -39,7 +39,7 @@ def AdaptiveThreshold(arr):
 
 if __name__ == '__main__':
     
-    img = Image.open('actress.jpg').convert('L')
+    img = Image.open('assets\actressBlur.jpg').convert('L')
     arr = np.array(img)
 
     new_arr = np.zeros(arr.shape,dtype='uint8')
@@ -52,4 +52,5 @@ if __name__ == '__main__':
 
     new_img = Image.fromarray(new_arr)
 
-    new_img.save('actress_threshold_image.jpg')   
+    new_img.save('assets\actressAdaptiveThreshold.jpg')
+    
