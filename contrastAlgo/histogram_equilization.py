@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 
+# for grayscale images
 def histogram_equilization(img):
     arr = np.array(img)
     hist = img.histogram()
@@ -14,5 +15,9 @@ def histogram_equilization(img):
             arr[i][j] = hist[arr[i][j]]
 
     new_img = Image.fromarray(arr)
-
     return new_img
+
+if __name__ == "__main__":
+    img = Image.open('../assets/original.jpg')
+    n_img = histogram_equilization(img)
+    n_img.show(title="Histogram Equilization")    

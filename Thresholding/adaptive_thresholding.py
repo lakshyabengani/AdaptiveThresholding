@@ -32,8 +32,8 @@ def AdaptiveThreshold(arr):
     h = arr.shape[0]//4
     w = arr.shape[1]//4
     for i in range(0,arr.shape[0],h):
-	for j in range(0,arr.shape[1],w):
-		window_thresholding(arr,i,j,h,w,new_arr)
+        for j in range(0,arr.shape[1],w):
+            window_thresholding(arr,i,j,h,w,new_arr)
     return new_arr
 
 
@@ -44,13 +44,12 @@ if __name__ == '__main__':
 
     new_arr = np.zeros(arr.shape,dtype='uint8')
 
-    n_arr = AdaptiveThreshold(arr,edge_len)
+    n_arr = AdaptiveThreshold(arr)
 
     for i in range(n_arr.shape[0]):
         for j in range(n_arr.shape[1]):
             new_arr[i][j] = int(n_arr[i][j])
 
     new_img = Image.fromarray(new_arr)
-
     new_img.save('assets\actressAdaptiveThreshold.jpg')
     

@@ -42,7 +42,7 @@ def MedianBlur(arr,window):
     return new_arr
 
 if __name__ == "__main__":
-    img = Image.open('hacking.jpg')
+    img = Image.open('../assets/hacking.jpg')
     arr = np.array(img)
 
     # define the window size and create a window

@@ -1,8 +1,8 @@
 import numpy as np
 from PIL import Image
 
+# only for grayscale images
 def contrast_stretch(img):
-    
     arr = np.array(img)
     hist = img.histogram()
     c=0
@@ -30,5 +30,9 @@ def contrast_stretch(img):
             l = (arr[i][j] - c)*r
             arr[i][j] = max(0,min(255,l))
     new_img = Image.fromarray(arr)
-
     return new_img
+
+if __name__ == "__main__":
+    img = Image.open('../assets/original.jpg')
+    n_img = contrast_stretch(img)
+    n_img.show(title="Contrast Stretching")
