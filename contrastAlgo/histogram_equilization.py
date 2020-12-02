@@ -18,6 +18,7 @@ def histogram_equilization(img):
     return new_img
 
 if __name__ == "__main__":
-    img = Image.open('../assets/original.jpg')
+    img = Image.open('assets/grayscale.jpg')
     n_img = histogram_equilization(img)
     n_img.show(title="Histogram Equilization")    
+    n_img.save("results/histogram_equilization.jpg")

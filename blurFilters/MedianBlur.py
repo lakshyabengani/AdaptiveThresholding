@@ -42,7 +42,7 @@ def MedianBlur(arr,window):
     return new_arr
 
 if __name__ == "__main__":
-    img = Image.open('../assets/hacking.jpg')
+    img = Image.open('assets/hacking.jpg')
     arr = np.array(img)
 
     # define the window size and create a window
@@ -61,4 +61,5 @@ if __name__ == "__main__":
 
     # Combine the results from all the channels  and save the pic 
     new_img = Image.fromarray(new_arr)
-    new_img.save('MeadianBlur.jpg')    
+    new_img.show(title="Median Blur")
+    new_img.save('results/MedianBlur.jpg')    

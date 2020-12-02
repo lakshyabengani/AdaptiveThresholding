@@ -33,6 +33,7 @@ def contrast_stretch(img):
     return new_img
 
 if __name__ == "__main__":
-    img = Image.open('../assets/original.jpg')
+    img = Image.open('assets/grayscale.jpg')
     n_img = contrast_stretch(img)
     n_img.show(title="Contrast Stretching")
+    n_img.save("results/Contrast Stretching.jpg")
