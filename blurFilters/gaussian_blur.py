@@ -28,7 +28,7 @@ def GausianBlur(arr,kernel):
     return new_arr
 
 if __name__ == "__main__":
-    img = Image.open('assets/hacking.jpg')
+    img = Image.open('assets/landscape.jpg')
     sigma = 1
     kernel_dimension = 5
     arr = np.array(img)
